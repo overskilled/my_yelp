@@ -1,23 +1,38 @@
 # Welcome to My Yelp
 ***
+This project built in aws Amplify
+
+[link to Amplify](https://main.d1n0w9jlxo76qz.amplifyapp.com/)
+
 
 ## Task
-TODO - What is the problem? And where is the challenge?
+Debug and host a yelp clone
 
 ## Description
-TODO - How have you solved the problem?
+Initialised an aws profile and set it to my app
+installed dependencies neede (aws-amplify,@aws-amplify/cli,graphql)
+add authentication(amplify add auth then amplify push)
+add backend(amplify add api then amplify push)
+initialised a githu repo and deployed using aws amplify
 
 ## Installation
-TODO - How to install your project? npm install? make? make re?
+````
+npm start
+````
+- http://localhost:3000
+
 
 ## Usage
-TODO - How does it work?
-```
-./my_project argument1 argument2
-```
+App is hosted at:
+https://main.d1n0w9jlxo76qz.amplifyapp.com/
+
+You just need to login or create an account then add restaurant descriptions
+
+
 
 ### The Core Team
 
 
-<span><i>Made at <a href='https://qwasar.io'>Qwasar SV -- Software Engineering School</a></i></span>
-<span><img alt='Qwasar SV -- Software Engineering School's Logo' src='https://storage.googleapis.com/qwasar-public/qwasar-logo_50x50.png' width='20px' /></span>
+<span><i>Made by <a href='https://www.linkedin.com/in/nuadje-todjo-dilan-wilfred-80b50b220/'>Nuadje Dilan</a></i></span>
+<br>
+<span><img alt='ndilanwil' src='./controller/public/4.png'></span>

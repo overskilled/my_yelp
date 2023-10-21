@@ -1,16 +1,15 @@
 /* tslint:disable */
+/* eslint-disable */
 //  This file was automatically generated and should not be edited.
 
 export type CreateRestaurantInput = {
   id?: string | null,
-  clientId?: string | null,
   name: string,
   description: string,
   city: string,
 };
 
 export type ModelRestaurantConditionInput = {
-  clientId?: ModelStringInput | null,
   name?: ModelStringInput | null,
   description?: ModelStringInput | null,
   city?: ModelStringInput | null,
@@ -59,21 +58,29 @@ export type ModelSizeInput = {
   between?: Array< number | null > | null,
 };
 
+export type Restaurant = {
+  __typename: "Restaurant",
+  id: string,
+  name: string,
+  description: string,
+  city: string,
+  createdAt: string,
+  updatedAt: string,
+};
+
 export type UpdateRestaurantInput = {
   id: string,
-  clientId?: string | null,
   name?: string | null,
   description?: string | null,
   city?: string | null,
 };
 
 export type DeleteRestaurantInput = {
-  id?: string | null,
+  id: string,
 };
 
 export type ModelRestaurantFilterInput = {
   id?: ModelIDInput | null,
-  clientId?: ModelStringInput | null,
   name?: ModelStringInput | null,
   description?: ModelStringInput | null,
   city?: ModelStringInput | null,
@@ -98,19 +105,65 @@ export type ModelIDInput = {
   size?: ModelSizeInput | null,
 };
 
+export type ModelRestaurantConnection = {
+  __typename: "ModelRestaurantConnection",
+  items:  Array<Restaurant | null >,
+  nextToken?: string | null,
+};
+
+export type ModelSubscriptionRestaurantFilterInput = {
+  id?: ModelSubscriptionIDInput | null,
+  name?: ModelSubscriptionStringInput | null,
+  description?: ModelSubscriptionStringInput | null,
+  city?: ModelSubscriptionStringInput | null,
+  and?: Array< ModelSubscriptionRestaurantFilterInput | null > | null,
+  or?: Array< ModelSubscriptionRestaurantFilterInput | null > | null,
+};
+
+export type ModelSubscriptionIDInput = {
+  ne?: string | null,
+  eq?: string | null,
+  le?: string | null,
+  lt?: string | null,
+  ge?: string | null,
+  gt?: string | null,
+  contains?: string | null,
+  notContains?: string | null,
+  between?: Array< string | null > | null,
+  beginsWith?: string | null,
+  in?: Array< string | null > | null,
+  notIn?: Array< string | null > | null,
+};
+
+export type ModelSubscriptionStringInput = {
+  ne?: string | null,
+  eq?: string | null,
+  le?: string | null,
+  lt?: string | null,
+  ge?: string | null,
+  gt?: string | null,
+  contains?: string | null,
+  notContains?: string | null,
+  between?: Array< string | null > | null,
+  beginsWith?: string | null,
+  in?: Array< string | null > | null,
+  notIn?: Array< string | null > | null,
+};
+
 export type CreateRestaurantMutationVariables = {
   input: CreateRestaurantInput,
   condition?: ModelRestaurantConditionInput | null,
 };
 
 export type CreateRestaurantMutation = {
-  createRestaurant:  {
+  createRestaurant?:  {
     __typename: "Restaurant",
     id: string,
-    clientId: string | null,
     name: string,
     description: string,
     city: string,
+    createdAt: string,
+    updatedAt: string,
   } | null,
 };
 
@@ -120,13 +173,14 @@ export type UpdateRestaurantMutationVariables = {
 };
 
 export type UpdateRestaurantMutation = {
-  updateRestaurant:  {
+  updateRestaurant?:  {
     __typename: "Restaurant",
     id: string,
-    clientId: string | null,
     name: string,
     description: string,
     city: string,
+    createdAt: string,
+    updatedAt: string,
   } | null,
 };
 
@@ -136,13 +190,14 @@ export type DeleteRestaurantMutationVariables = {
 };
 
 export type DeleteRestaurantMutation = {
-  deleteRestaurant:  {
+  deleteRestaurant?:  {
     __typename: "Restaurant",
     id: string,
-    clientId: string | null,
     name: string,
     description: string,
     city: string,
+    createdAt: string,
+    updatedAt: string,
   } | null,
 };
 
@@ -151,13 +206,14 @@ export type GetRestaurantQueryVariables = {
 };
 
 export type GetRestaurantQuery = {
-  getRestaurant:  {
+  getRestaurant?:  {
     __typename: "Restaurant",
     id: string,
-    clientId: string | null,
     name: string,
     description: string,
     city: string,
+    createdAt: string,
+    updatedAt: string,
   } | null,
 };
 
@@ -168,49 +224,65 @@ export type ListRestaurantsQueryVariables = {
 };
 
 export type ListRestaurantsQuery = {
-  listRestaurants:  {
+  listRestaurants?:  {
     __typename: "ModelRestaurantConnection",
     items:  Array< {
       __typename: "Restaurant",
       id: string,
-      clientId: string | null,
       name: string,
       description: string,
       city: string,
-    } | null > | null,
-    nextToken: string | null,
+      createdAt: string,
+      updatedAt: string,
+    } | null >,
+    nextToken?: string | null,
   } | null,
+};
+
+export type OnCreateRestaurantSubscriptionVariables = {
+  filter?: ModelSubscriptionRestaurantFilterInput | null,
 };
 
 export type OnCreateRestaurantSubscription = {
-  onCreateRestaurant:  {
+  onCreateRestaurant?:  {
     __typename: "Restaurant",
     id: string,
-    clientId: string | null,
     name: string,
     description: string,
     city: string,
+    createdAt: string,
+    updatedAt: string,
   } | null,
+};
+
+export type OnUpdateRestaurantSubscriptionVariables = {
+  filter?: ModelSubscriptionRestaurantFilterInput | null,
 };
 
 export type OnUpdateRestaurantSubscription = {
-  onUpdateRestaurant:  {
+  onUpdateRestaurant?:  {
     __typename: "Restaurant",
     id: string,
-    clientId: string | null,
     name: string,
     description: string,
     city: string,
+    createdAt: string,
+    updatedAt: string,
   } | null,
 };
 
+export type OnDeleteRestaurantSubscriptionVariables = {
+  filter?: ModelSubscriptionRestaurantFilterInput | null,
+};
+
 export type OnDeleteRestaurantSubscription = {
-  onDeleteRestaurant:  {
+  onDeleteRestaurant?:  {
     __typename: "Restaurant",
     id: string,
-    clientId: string | null,
     name: string,
     description: string,
     city: string,
+    createdAt: string,
+    updatedAt: string,
   } | null,
 };
