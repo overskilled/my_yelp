@@ -20,7 +20,7 @@ type Restaurant = {
 };
 
 type AppState = {
-  restaurants: Restauraent[];
+  restaurants: Restaurant[];
   formData: Restaurant;
 };
 
